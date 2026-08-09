@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { DecorativeLine } from "@/components/ui/DecorativeLine";
 import { DotField } from "@/components/ui/DotField";
-import { Reveal, RevealItem } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { PROJECTS } from "@/lib/landing";
 
 const INITIAL = 6;
@@ -41,9 +41,12 @@ export function TrabajosGallery() {
           </p>
         </Reveal>
 
-        <Reveal stagger className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {visible.map((project) => (
-            <RevealItem key={project.title} className="group">
+        {/* Cada tarjeta anima por su cuenta (whileInView). Así las que se agregan
+            al tocar "Ver todos los casos" aparecen bien, sin quedarse invisibles
+            como pasaba con el stagger del contenedor. */}
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {visible.map((project, index) => (
+            <Reveal key={project.title} delay={(index % 3) * 0.06} className="group">
               <div className="relative aspect-[4/3] overflow-hidden rounded-card ring-1 ring-accent-support/20">
                 <Image
                   src={project.cover}
@@ -55,9 +58,9 @@ export function TrabajosGallery() {
               </div>
               <p className="mt-3 font-heading text-base font-medium text-text">{project.title}</p>
               <p className="mt-0.5 font-mono text-[11px] uppercase tracking-wider text-text-muted">{project.category}</p>
-            </RevealItem>
+            </Reveal>
           ))}
-        </Reveal>
+        </div>
 
         {hasMore && !showAll ? (
           <Reveal delay={0.1} className="mt-12">

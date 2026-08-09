@@ -67,7 +67,7 @@ function Hero() {
         fill
         priority
         sizes="100vw"
-        className="z-0 object-cover object-[center_42%]"
+        className="z-0 object-cover object-[center_38%] md:object-[center_28%]"
       />
       {/* Forma de color detrás del velo (rosa palo). */}
       <div
