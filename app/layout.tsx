@@ -8,24 +8,25 @@ import "./globals.css";
 const GA_MEASUREMENT_ID = "G-7BC7CKWSL1";
 
 const SITE_URL = "https://micaelaauzmendi.com";
+const SITE_TITLE = "Mica Auzmendi · Diseño de tiendas online y experiencia de compra";
 const SITE_DESCRIPTION =
-  "Micaela Auzmendi — Product Designer especializada en UX/UI, Design Systems e integración de IA en procesos de diseño de producto.";
-// Versión optimizada (1200x630) de /photos/share-portfolio.png para previews de link
+  "Hago que comprarte sea fácil. Diseño y rediseño tu tienda online, tu landing y la experiencia de compra completa — del feed a la tienda, de la compra a la re-compra.";
+// Versión optimizada (1200x630) para previews de link
 const SHARE_IMAGE = "/photos/share-portfolio-og.jpg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Micaela Auzmendi · Product Designer UX/UI",
-    template: "%s · Micaela Auzmendi",
+    default: SITE_TITLE,
+    template: "%s · Mica Auzmendi",
   },
   description: SITE_DESCRIPTION,
   icons: { icon: "/favicon.svg" },
   openGraph: {
-    title: "Micaela Auzmendi · Product Designer UX/UI",
+    title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
-    siteName: "Micaela Auzmendi",
+    siteName: "Mica Auzmendi",
     locale: "es_AR",
     type: "website",
     images: [
@@ -33,13 +34,13 @@ export const metadata: Metadata = {
         url: SHARE_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Micaela Auzmendi · Product Designer UX/UI",
+        alt: SITE_TITLE,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Micaela Auzmendi · Product Designer UX/UI",
+    title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: [SHARE_IMAGE],
   },

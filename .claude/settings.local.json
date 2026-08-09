@@ -111,7 +111,13 @@
       "PowerShell(\\(Get-Item \"C:\\\\Users\\\\usuario\\\\Desktop\\\\UX Mica\\\\Portfolio Interactivo\\\\public\\\\photos\\\\share-portfolio.png\"\\).Length/1MB)",
       "Bash(curl -s -o /dev/null -w \"%{http_code} %{content_type} %{size_download}\\\\n\" http://localhost:3000/photos/share-portfolio-og.png)",
       "PowerShell(\"borrado\")",
-      "Bash(curl -s -o /dev/null -w \"%{http_code} %{content_type} %{size_download} bytes\\\\n\" http://localhost:3000/photos/share-portfolio-og.jpg)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code} %{content_type} %{size_download} bytes\\\\n\" http://localhost:3000/photos/share-portfolio-og.jpg)",
+      "Bash(grep -iA0 \"\")",
+      "Bash(mv \"ChatGPT Image 26 jul 2026, 11_59_23 a.m..png\" mica-01.png)",
+      "Bash(mv \"ChatGPT Image 26 jul 2026, 07_13_40 p.m..png\" mica-02.png)",
+      "Bash(mv \"ChatGPT Image 26 jul 2026, 07_14_36 p.m..png\" mica-03.png)",
+      "Bash(mv \"ChatGPT Image 28 jul 2026, 03_29_50 p.m..png\" mica-04.png)",
+      "Bash(mv \"ChatGPT Image 28 jul 2026, 03_31_51 p.m..png\" mica-05.png)"
     ]
   }
 }
